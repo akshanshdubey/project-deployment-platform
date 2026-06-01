@@ -1,0 +1,31 @@
+services:
+
+  backend:
+    build: ./backend
+
+    ports:
+      - "5001:5000"
+
+    volumes:
+      - ./backend:/app
+      - ./deployments:/app/deployments
+
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:17
+
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: deployment_platform
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
