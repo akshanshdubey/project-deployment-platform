@@ -1,5 +1,4 @@
-```javascript
-const API_URL = "http://13.127.109.161:5001"
+const API_URL = "http://13.235.99.38:5001"
 
 async function loadProjects() {
 
@@ -23,7 +22,7 @@ async function loadProjects() {
 
                 ${
                     project.deployed_port
-                    ? `<a href="http://13.127.109.161:${project.deployed_port}" target="_blank">
+                    ? `<a href="http://13.235.99.38:${project.deployed_port}" target="_blank">
                         Open App
                       </a>`
                     : ""
@@ -62,4 +61,3 @@ async function deployProject() {
 }
 
 loadProjects()
-```
