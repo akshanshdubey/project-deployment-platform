@@ -1,0 +1,48 @@
+```css
+body {
+    background: #0f172a;
+    color: white;
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.deploy-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.project-card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+```

@@ -1,0 +1,41 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deployment Platform</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Deployment Platform</h1>
+
+        <div class="deploy-box">
+
+            <input
+                type="text"
+                id="repoUrl"
+                placeholder="Enter GitHub Repository URL"
+            >
+
+            <button onclick="deployProject()">
+                Deploy
+            </button>
+
+        </div>
+
+        <h2>Deployments</h2>
+
+        <div id="projectsContainer"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```

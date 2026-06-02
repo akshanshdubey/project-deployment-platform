@@ -1,11 +1,15 @@
+```python
 import os
 import time
 import subprocess
 
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS
 
 app = Flask(__name__)
+
+CORS(app)
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://admin:password@postgres:5432/deployment_platform"
 
@@ -162,7 +166,7 @@ def deploy_project():
         "container_name": container_name,
         "image_name": image_name,
         "port": deployed_port,
-        "url": f"http://localhost:{deployed_port}"
+        "url": f"http://13.127.109.161:{deployed_port}"
     })
 
 
@@ -186,3 +190,4 @@ if __name__ == "__main__":
         port=5000,
         debug=True
     )
+```
