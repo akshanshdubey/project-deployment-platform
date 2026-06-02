@@ -174,7 +174,7 @@ def deploy_project():
         "container_name": container_name,
         "image_name": image_name,
         "port": deployed_port,
-        "url": f"http://13.235.99.38:{deployed_port}"
+        "url": f"http://3.109.17.104:{deployed_port}"
     })
 
 
