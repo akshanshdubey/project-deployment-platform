@@ -1,13 +1,16 @@
-```python
 import os
 import time
 import subprocess
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    template_folder="templates",
+    static_folder="static"
+)
 
 CORS(app)
 
@@ -22,6 +25,11 @@ class Project(db.Model):
     repo_url = db.Column(db.String(500))
     status = db.Column(db.String(50))
     deployed_port = db.Column(db.Integer)
+
+
+@app.route("/")
+def home():
+    return render_template("index.html")
 
 
 @app.route("/projects", methods=["POST"])
@@ -190,4 +198,3 @@ if __name__ == "__main__":
         port=5000,
         debug=True
     )
-```
