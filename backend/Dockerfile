@@ -4,8 +4,10 @@ WORKDIR /app
 
 RUN apt-get update && apt-get install -y \
     git \
-    docker.io \
-    postgresql-client
+    postgresql-client \
+    curl
+
+RUN curl -fsSL https://get.docker.com | sh
 
 COPY requirements.txt .
 
